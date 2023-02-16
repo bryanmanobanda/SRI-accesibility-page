@@ -1,0 +1,135 @@
+
+
+.colorPrimario{
+    background: #104494;
+}
+.colorSecundario{
+    background: #D9D9D9;
+}
+.colorprimarioFuente{
+    color: #000000;
+}
+.colorSecundarioFuente{
+    color: #FFFFFF;
+}
+.borde{
+    border: 1px solid #000000;
+}
+
+.cabecera{
+    height: 80px;
+}
+
+.fuenteBolder{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#botonHamburguesa{
+    border: none;
+    color: white;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+}
+
+#botonIniciarSesion{
+    padding-left: 0;
+    padding-right: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+#botonIniciarSesion>i{
+    margin-right: 5px;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #104494;
+    border-radius: 20px;
+    background: white;
+}
+ 
+ ul{
+    list-style-type: none;
+ }
+
+ li{
+    padding-left: 10px;
+ }
+
+ .titulo{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+ }
+
+ .titulo2{
+    font-size: 15px;
+    color: white;
+ }
+
+ .titulo3{
+    font-size: 20px;
+    color: black;
+ }
+
+ #iconoAuto{
+    font-size: 100px;
+ }
+
+ .centrarTexto{
+    text-align: center;
+ }
+
+.tabla1Elemento{
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+ }
+
+ .tabla4Elementos{
+    width: 40%;
+    height: 100px;
+    margin: 10px;
+ }
+
+ .tabla7Elementos{
+    width: 90%;
+    height: 70px;
+    margin: 10px;
+ }
+
+ section{
+    padding-right: 0px;
+ }
+
+ #buscarReporte{
+    width: 300px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-right: 0px;
+ }
+
+ .tablaReportes{
+    width: 95%;
+    margin: 10px
+    
+ }
+
+ tr{
+    padding-top: 200px; 
+ }
+
+#detallesVehiculo{
+    display: none;
+}
+
+ 
+
+
+
+ 
