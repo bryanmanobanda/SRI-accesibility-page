@@ -1,0 +1,136 @@
+.colorPrimario {
+    background: #104494;
+}
+
+
+
+.cabecera {
+    height: 80px;
+}
+
+#botonHamburguesa {
+    border: none;
+    color: white;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+}
+
+#botonIniciarSesion {
+    padding-left: 0;
+    padding-right: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+#botonIniciarSesion>i {
+    margin-right: 5px;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #104494;
+    border-radius: 20px;
+    background: white;
+}
+
+nav {
+    list-style-type: none;
+}
+
+li {
+    padding-left: 10px;
+}
+
+
+
+
+
+.titulo {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.information {
+    margin-top: 30px !important;
+}
+
+
+
+
+
+
+
+
+
+/*consultaReporte*/
+
+.consulta{
+    border: 1px solid gray;
+    box-shadow: 2px 2px 1px gray;
+    margin-top: 25px !important;
+    margin-bottom: 35px;
+}
+
+.no-decoration{
+    text-decoration: none;
+}
+
+.consulta h4{
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.consulta form{
+    text-align: justify;
+    padding: 0px 10px;
+}
+
+.consulta form input, .consulta form label{
+    margin-bottom: 10px;
+}
+
+#ingresoDatos{
+    width: 100%;
+    padding: 2px 15px;
+}
+
+#consultar{
+    background-color: #4A7D8C;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 3px 20px;
+    margin-left: 35%;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.download > a{
+    margin: 0% 20%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.download-icon{
+    color: #4A7D8C;
+    font-size: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-p{
+    color: black;
+}
+
+.alert{
+    color: #DC3838 !important;
+    
+}
