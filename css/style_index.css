@@ -81,13 +81,30 @@
 }
 .barraLateral .row{
     display: flex;        
-    align-items: center;  
+    align-items: center;
+    padding-left: 3%;  
 }
 .barraLateral .col p {
     padding-top: 10px;
 }
-
-
+/* SubMenu Barra lateral */
+#submenu ul {
+    list-style: none;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px; 
+    border: 1px solid black;
+}
+#submenu li {
+    list-style: none;
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+}
+#submenu li:hover {
+    color: blue;
+}
 @media (max-width: 576px) {
 .barraLateral {
     position: absolute;
@@ -99,6 +116,23 @@
     height: 100%;
     overflow-y: auto;
     z-index: 100;
+}
+#submenu ul {
+    list-style: none;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px; 
+    border: 1px solid black;
+}
+#submenu li {
+    list-style: none;
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+}
+#submenu li:hover {
+    color: blue;
 }
 }
 .titulo {
@@ -183,7 +217,6 @@
 #submenuOpciones li:hover {
     color: blue;
 }
-
 .matriz .cell:hover {    
     background-color: lightblue;
 }
