@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+.colorPrimario {
+    background: #104494;
+}
+.cabecera {
+    height: 80px;
+}
+
+#botonHamburguesa {
+    border: none;
+    color: white;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+}
+
+#botonIniciarSesion {
+    padding-left: 0;
+    padding-right: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+#botonIniciarSesion>i {
+    margin-right: 5px;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #104494;
+    border-radius: 20px;
+    background: white;
+}
+/* Barra lateral */
+
+.barraLateral{
+    background-color: #fff;
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.26);
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.barraLateral .row:hover {    
+    background-color: lightblue;
+}
+.barraLateral p:hover {    
+    text-decoration: underline;
+}
+
+.barraLateral button{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+}
+
+.barraLateral button:hover {    
+    background-color: lightblue;
+    text-decoration: underline;
+}
+
+/*Acomodar elementos de la barra*/
+.barraLateral .col i,
+.barraLateral .col p {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1%;
+}
+.barraLateral .row{
+    display: flex;        
+    align-items: center;  
+}
+.barraLateral .col p {
+    padding-top: 10px;
+}
+
+
+@media (max-width: 576px) {
+.barraLateral {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 100;
+}
+}
+.titulo {
+    font-size: 32px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px;
+}
+.subtitulo {
+    font-size: 24px;
+    text-align: start;
+    font-weight: bolder;
+    padding: 0px 0px 0px 0px;
+}
+.d-flex.busqueda{
+    padding: 20px 30% 30px 30%;
+
+}
+/* Matriz de opciones */
+.container{
+    width: 90%;
+}
+.container .cell {
+    position:relative;
+    border-radius: 18px; 
+    border: 1px solid black;
+    padding: 10px;
+}
+  /* Iconos */
+.container .cell i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+}
+.icono2 {
+    color: #104494;
+}  
+
+.cell i {
+    left: 5%;
+}
+
+.cell i:nth-of-type(2) {
+    left: 10%;
+    margin-left: 10%;
+}
+  
+.matriz .text {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20%;
+}
+  
+.matriz .row {
+    margin: 10px 0;
+}
+  
+@media (max-width: 767px) {
+    .matriz .cell {
+      height: 80px;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+}
+
+#submenuOpciones ul {
+    list-style: none;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px; 
+    border: 1px solid black;
+}
+#submenuOpciones li {
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+}
+#submenuOpciones li:hover {
+    color: blue;
+}
+
+.matriz .cell:hover {    
+    background-color: lightblue;
+}
+
