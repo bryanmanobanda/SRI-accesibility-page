@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles_Reporte.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles_informacion.css">
     <script src="https://kit.fontawesome.com/6ce83ec7a8.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Reporte de Pagos</title>
 </head>
-<body class="container-fluid p-0">
+<body class="container-fluid p-0 cuerpo">
     <header class="colorPrimario cabecera row">
         <div class="col d-flex align-items-center">
             <button title="Menu" id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars"></button>
@@ -23,9 +24,9 @@
         <div class="col d-flex">
             <nav>
                 <ul class="d-flex m-3 align-items-center">
-                    <li class="mx-1" ><a href="" class="fa-solid fa-house" title="Inicio"></a></li>
+                    <li class="mx-1" ><a href="index.html" class="fa-solid fa-house" title="Inicio"></a></li>
                     <em class="fa-solid fa-angle-right"></em>
-                    <li class="mx-1"><a href="">Vehículos</a></li>
+                    <li class="mx-1"><a href="consulta.html">Vehículos</a></li>
                     <em class="fa-solid fa-angle-right"></em>
                     <li class="mx-1"><a href="">Reporte de pagos</a></li>
                 </ul>
@@ -169,7 +170,8 @@
                             <td>PAGO DE VALOR DE LA MATRÍCULA</td>
                             <td>12125689513264562315</td>
                             <td>$77.74</td>
-                            <td><button title="ver reporte" class="bg-white border-0 fa-solid fa-eye"></button><button title="descargar      reporte" class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
+                            <td>
+                                <button title="ver reporte" class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button title="descargar reporte" class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
                         </tr>
                         <tr class="colorSecundario">
                             <td>PCA 2445</td>
@@ -178,7 +180,7 @@
                             <td>PAGO DE VALOR DE LA MATRÍCULA</td>
                             <td>12125689513264562315</td>
                             <td>$77.74</td>
-                            <td><button class="colorSecundario border-0 fa-solid fa-eye"></button><button class="colorSecundario border-0 fa-sharp fa-solid fa-download"></button></td>
+                            <td><button class="colorSecundario border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="colorSecundario border-0 fa-sharp fa-solid fa-download"></button></td>
                         </tr>
                         <tr>
                             <td>PCA 2445</td>
@@ -187,7 +189,7 @@
                             <td>PAGO DE VALOR DE LA MATRÍCULA</td>
                             <td>12125689513264562315</td>
                             <td>$77.74</td>
-                            <td><button class="bg-white border-0 fa-solid fa-eye"></button><button class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
+                            <td><button class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
                         </tr>
                         <tr class="colorSecundario">
                             <td>PCA 2445</td>
@@ -196,7 +198,7 @@
                             <td>PAGO DE VALOR DE LA MATRÍCULA</td>
                             <td>12125689513264562315</td>
                             <td>$77.74</td>
-                            <td><button class="colorSecundario border-0 fa-solid fa-eye"></button><button class="colorSecundario border-0 fa-sharp fa-solid fa-download"></button></td>
+                            <td><button class="colorSecundario border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="colorSecundario border-0 fa-sharp fa-solid fa-download"></button></td>
                         </tr>
                         <tr>
                             <td>PCA 2445</td>
@@ -205,7 +207,7 @@
                             <td>PAGO DE VALOR DE LA MATRÍCULA</td>
                             <td>12125689513264562315</td>
                             <td>$77.74</td>
-                            <td><button class="bg-white border-0 fa-solid fa-eye"></button><button class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
+                            <td><button class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
                         </tr>
                     </table>
             </div>   
@@ -224,14 +226,97 @@
                             <li><button title="tabla siguiente" class="fa-solid fa-angle-right"></button></li>
                         </ul>
                     </nav>
-                    
                 </div>
-                
             </div>
         </div>
 
+        <div class="fondo_transparente container-fluid">
+            <div class="caja bg-white">
+                <div class="d-flex justify-content-between justify-align-center">
+                    <h1 class="mt-4 ms-4" tabindex="0">Detalle del pago de valor de matrícula</h1>
+                    <div class="modal_cerrar mt-1 me-1" tabindex="0">
+                        <i class="fa fa-xmark fa-2x"></i>
+                    </div>
+                </div>
+                <div class="align-items-center">
+                    <div class="col d-flex flex-wrap d-flex justify-content-between ms-4 me-4">
+                        <div class="col-3 m-4 p-0">
+                            <div class="mb-3 bloque">
+                                <h3 class="fs-24-bold mb-1" tabindex="0">Placa, RAMV o CPN actual</h3>
+                                <p class="fs-18 m-1" tabindex="0">PCA 2445</p>
+                            </div>
+                            <div class="mb-3 bloque mt-5">
+                                <h3 class="fs-24-bold mb-1" tabindex="0">Placa, RAMV o CPN de pago</h3>
+                                <p class="fs-18 m-1" tabindex="0">PCA 2445</p>
+                            </div>
+                        </div>
+                        <div class="col-3 m-4 p-0">
+                            <div class="mb-3 bloque">
+                                <h3 class="fs-24-bold mb-1" tabindex="0">Institución Financiera</h3>
+                                <p class="fs-18 m-1" tabindex="0">COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</p>
+                            </div>
+                            <div class="mb-3 bloque">
+                                <h3 class="fs-24-bold mb-1" tabindex="0">Tipo de Deuda</h3>
+                                <p class="fs-18 m-1" tabindex="0">PAGO DEL VALOR DE LA MATRÍCULA</p>
+                            </div>
+                        </div>
+                        <div class="col-3 m-4 p-0">
+                            <div class="mb-3 bloque">
+                                <h3 class="fs-24-bold mb-1" tabindex="0">Fecha de Pago</h3>
+                                <p class="fs-18 m-1" tabindex="0">2021-03-22 06:21</p>
+                            </div>
+                            <div class="mb-3 bloque mt-75">
+                                <h3 class="fs-24-bold mb-1" tabindex="0">Comprobante</h3>
+                                <p class="fs-18 m-1" tabindex="0">12125689513264562315</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex flex-wrap justify-content-around align-items-center">
+                        <table tabindex="0" class="centrarTexto tablaReportes"  border="1">
+                            <tr class="colorPrimario colorSecundarioFuente">
+                                <th scope="col" tabindex="0">Rubro <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                                <th tabindex="0">Componente <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                                <th tabindex="0">Año <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                                <th tabindex="0">Valor <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                            </tr>
+                            <tr>
+                                <td tabindex="0">Impuesto a la propiedad</td>
+                                <td tabindex="0">Impuesto</td>
+                                <td tabindex="0">2020</td>
+                                <td tabindex="0">$6.00</td>
+                            </tr>
+                            <tr class="colorSecundario">
+                                <td tabindex="0">Impuesto a la propiedad</td>
+                                <td tabindex="0">Impuesto</td>
+                                <td tabindex="0">2020</td>
+                                <td tabindex="0">$6.00</td>
+                            </tr>
+                            <tr>
+                                <td tabindex="0">Impuesto a la propiedad</td>
+                                <td tabindex="0">Impuesto</td>
+                                <td tabindex="0">2020</td>
+                                <td tabindex="0">$6.00</td>
+                            </tr>
+                            <tr class="colorSecundario">
+                                <td tabindex="0">Impuesto a la propiedad</td>
+                                <td tabindex="0">Impuesto</td>
+                                <td tabindex="0">2020</td>
+                                <td tabindex="0">$6.00</td>
+                            </tr>
+                            <tr>
+                                <td tabindex="0">Impuesto a la propiedad</td>
+                                <td tabindex="0">Impuesto</td>
+                                <td tabindex="0">2020</td>
+                                <td tabindex="0">$6.00</td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+        </div>
     </section>
-
+    <script src="./js/script_informacion.js"></script>
     <script src="js/script_reporte.js"></script>
 </body>
 </html>
