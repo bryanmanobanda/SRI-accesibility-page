@@ -6,7 +6,6 @@ var tabla = document.querySelector(".fondo_transparente .tablaReportes");
 var elementos = tabla.querySelectorAll('td');
 var ultimoElemento = elementos[elementos.length - 1];
 
-
 function mostrar_detalle(){
     modal.style.display = 'block';    
     overlay.style.display = "block";
@@ -23,6 +22,11 @@ ultimoElemento.addEventListener('keydown', function(e) {
   if (e.keyCode == 9) {
     e.preventDefault();
     firstElement.focus();
+  }
+
+  if (event.keyCode === 9 && event.shiftKey) {
+    e.preventDefault();
+    elementos[elementos.length - 2].focus();
   }
 });
 
