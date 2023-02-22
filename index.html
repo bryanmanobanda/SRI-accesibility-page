@@ -121,10 +121,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col" tabindex="0">
+            <div class="col" tabindex="0" onclick="opcionSubmenu()">
                 <i class="fa-solid fa-caret-right"></i>
                 <i class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car"></iconify-icon></i>
-                <p class="text" ><button onclick="opcionSubmenu()" tabindex="0">VEHÍCULOS</button></p>
+                <p class="text" tabindex="0">VEHÍCULOS</p>
             </div>
             <div id="submenu" style="display:none;">
                 <li tabindex="0">Valores a pagar por placa, RAMV, CPN, o chasis</li>
@@ -285,8 +285,8 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0" onclick="toggleSubmenuOpciones()" ></i>
+                            <div class="cell" tabindex="0" id="menuVehiculos" onclick="toggleSubmenuOpciones()">
+                                <i class="fa-solid fa-circle-plus" tabindex="0" ></i>
                                 <i class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car"></iconify-icon></i>
                                 <p class="text" tabindex="0">Vehiculos</p>
                             </div>

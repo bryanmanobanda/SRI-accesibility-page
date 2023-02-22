@@ -78,6 +78,7 @@
   display: inline-block;
   vertical-align: middle;
   padding: 1%;
+  cursor: pointer;
 }
 .barraLateral .row{
     display: flex;        
@@ -160,6 +161,7 @@
     border-radius: 18px; 
     border: 1px solid black;
     padding: 10px;
+    cursor: pointer;
 }
   /* Iconos */
 .container .cell i {
