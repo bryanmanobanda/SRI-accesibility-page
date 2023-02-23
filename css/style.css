@@ -25,7 +25,7 @@
     font-size: 12px;
 }
 
-#botonIniciarSesion>i {
+#botonIniciarSesion>em {
     margin-right: 5px;
     padding: 4px;
     width: 30px;
@@ -80,9 +80,10 @@ li {
     text-decoration: none;
 }
 
-.consulta h4{
+.consulta h2{
     text-align: center;
     margin: 15px 0px;
+    font-size: 24px;
 }
 
 .consulta form{
@@ -133,4 +134,30 @@ li {
 .alert{
     color: #DC3838 !important;
     
+}
+
+/*Advertencia*/
+
+
+#dialog-box{
+    color: #B13955;
+    background-color: #F0E0E0;
+    text-align: center;
+}
+
+#advertencia{
+    background-color: #C44A67;
+    color:#FCFCFC;
+    border: 0px;
+    border-radius: 10px;
+    padding: 5px 8px;
+}
+
+/*Lenguaje y tamaño de letra*/
+.font-lng{
+    background-color: #2371E7;
+}
+.font-lng button{
+    background-color: #2371E7;
+    border: 0px;
 }
