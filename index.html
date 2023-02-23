@@ -17,114 +17,140 @@
     <script src="https://kit.fontawesome.com/6ce83ec7a8.js" crossorigin="anonymous"></script>
 </head>
 <body class="container-fluid p-0">
-    <header class="colorPrimario cabecera row">
+    <header class="colorPrimario cabecera row" tabindex="0" aria-label="Barra de navegación">
         <div class="col d-flex align-items-center">
-            <button tabindex="0" id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars" onclick="menuBarraLateral()"></button>
-            <img class="mx-3 logo float-start" src="imagenes/sri-en-linea.svg" alt="Logo SRI en línea">
+            <button  id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars" onclick="menuBarraLateral()"  aria-label="Accionar para abrir menu" aria-expanded="false"></button>
+            <img tabindex="0" class="mx-3 logo float-start" src="imagenes/sri-en-linea.svg" alt="Logo del Servicio de Rentas internas SRI, en línea">
         </div>
         <div class="col d-flex flex-row-reverse align-items-center">
-            <button tabindex="0" id="botonIniciarSesion" class="colorPrimario mx-5 float-end"><i class=" fa-solid fa-user"></i>
+            <button id="botonIniciarSesion" class="colorPrimario mx-5 float-end"><i class=" fa-solid fa-user"></i>
                 Iniciar Sesión</button>
         </div>
     </header>
+
+    <!-- Barra cambiar tamaño de letra / Idioma -->
+       
+    <div class="font-lng">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <button onclick="cambiarTamanoLetra(-1)" title="disminuir tamaño letra"><em class="fa-solid fa-circle-minus"></em></button>
+                <span>Tamaño de letra</span>
+                <button onclick="cambiarTamanoLetra(1)" title="aumentar tamaño letra"><em class="fa-solid fa-circle-plus"></em></button>
+            </div>
+            <div class="col-md-6 text-end" >
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      Seleccione un idioma
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                      <li><a class="dropdown-item" href="#">Español</a></li>
+                      <li><a class="dropdown-item" href="#">Kichwa</a></li>
+                      <li><a class="dropdown-item" href="#">Shuar</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </div>
     <!-- Menu de opciones -->
     <div class="barraLateral" id="barraLateral" style="display: none;">
         <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-solid fa-key icono2" ></i>
-                <p class="text" >CLAVES</p>
+            <div class="col" tabindex="0" id="primeraOpcion">
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="fa-solid fa-key icono2" aria-label="Icono con la figura de una llave para la opción"></em>
+                <p class="text" tabindex="0" >CLAVES</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-solid fa-building-user icono2" tabindex="0"></i>
-                <p class="text" >RISE</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="fa-solid fa-building-user icono2"  aria-label="Icono con la figura de un edificio para la opción"></em>
+                <p class="text" tabindex="0" >RISE</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-regular fa-address-card icono2" tabindex="0"></i>
-                <p class="text" >RUC</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="fa-regular fa-address-card icono2"  aria-label="Icono con la figura de una credencial de identidad para la opción"></em>
+                <p class="text" tabindex="0" >RUC</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-solid fa-hand-holding-dollar icono2" tabindex="0"></i>
-                <p class="text" >FACTURACIÓN FÍSICA</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="fa-solid fa-hand-holding-dollar icono2"  aria-label="Icono con la figura de una mano recibiendo efectivo para la opción"></em>
+                <p class="text" tabindex="0" >FACTURACIÓN FÍSICA</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="mdi:account-payment" tabindex="0"></iconify-icon></i>
-                <p class="text" >FACTURACIÓN ELECTRÓNICA</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2"><iconify-icon icon="mdi:account-payment"  aria-label="Icono con la figura de un usuario y su tarjeta bancaria para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >FACTURACIÓN ELECTRÓNICA</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="mdi:document-sign" tabindex="0"></iconify-icon></i>
-                <p class="text" >DECLARACIONES</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2"><iconify-icon icon="mdi:document-sign"  aria-label="Icono con la figura de un documento firmado para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >DECLARACIONES</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="mdi:file-document-box-multiple" tabindex="0"></iconify-icon></i>
-                <p class="text" >ANEXOS</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2"><iconify-icon icon="mdi:file-document-box-multiple"  aria-label="Icono con la figura de varios documentos apilados para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >ANEXOS</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="medical-icon:i-billing" tabindex="0"></iconify-icon></i>
-                <p class="text" >PAGOS</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2"><iconify-icon icon="medical-icon:i-billing"  aria-label="Icono con la figura de dos personas realizando una trasaccion monetaria para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >PAGOS</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="fa6-regular:money-bill-1" tabindex="0"></iconify-icon></i>
-                <p class="text" >DEUDAS</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2"><iconify-icon icon="fa6-regular:money-bill-1"  aria-label="Icono con la figura de un billete de dolar para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >DEUDAS</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="ri:refund-2-line" tabindex="0"></iconify-icon></i>
-                <p class="text" >DEVOLUCIONES</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2"><iconify-icon icon="ri:refund-2-line"  aria-label="Icono con el simbolo de dinero enmarcado en un ciclo continuo para la opción"></iconify-icon></em> 
+                <p class="text" tabindex="0" >DEVOLUCIONES</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="vaadin:money-withdraw" tabindex="0"></iconify-icon></i>
-                <p class="text" >REINTEGRO DE VALORES</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2"><iconify-icon icon="vaadin:money-withdraw"  aria-label="Icono con la figura de un billete siendo devuelto para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >REINTEGRO DE VALORES</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0"><iconify-icon icon="material-symbols:chat-rounded"></iconify-icon></i>
-                <p class="text" >TRAMITE Y NOTIFICACIONES</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2" ><iconify-icon icon="material-symbols:chat-rounded" aria-label="Icono con la figura de un mensaje para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >TRAMITE Y NOTIFICACIONES</p>
             </div>
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0"><iconify-icon icon="mdi:certificate-outline"></iconify-icon></i>
-                <p class="text" >CERTIFICADOS</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2" ><iconify-icon icon="mdi:certificate-outline" aria-label="Icono con la figura de un documento verificado y aprobado para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >CERTIFICADOS</p>
             </div>
         </div>
         <div class="row">
-            <div class="col" tabindex="0" onclick="opcionSubmenu()">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car"></iconify-icon></i>
-                <p class="text" tabindex="0">VEHÍCULOS</p>
+            <div role="button" class="col" id="VehiculoML" tabindex="0" onclick="opcionSubmenu()" aria-label="Accionar para más opciones de Vehiculos" aria-expanded="false">
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car" aria-label="Icono con la figura de un vehiculo para la opción vehiculos"></iconify-icon></em>
+                <p class="text" tabindex="0" >VEHÍCULOS</p>
             </div>
             <div id="submenu" style="display:none;">
                 <li tabindex="0">Valores a pagar por placa, RAMV, CPN, o chasis</li>
@@ -140,9 +166,9 @@
         </div>
         <div class="row">
             <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0"><iconify-icon icon="ic:outline-miscellaneous-services"></iconify-icon></i>
-                <p class="text" >OTROS SERVICIOS</p>
+                <em class="fa-solid fa-caret-right"></em>
+                <em class="icono2" ><iconify-icon icon="ic:outline-miscellaneous-services" aria-label="Icono con la figura de unos engranajes para la opción"></iconify-icon></em>
+                <p class="text" tabindex="0" >OTROS SERVICIOS</p>
             </div>
         </div>
     </div>
@@ -161,11 +187,11 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <form class="d-flex busqueda" role="Buscar">
+                    <form class="d-flex busqueda">
                         <div class="input-group">
-                          <input class="form-control me-2" type="search" placeholder="Buscar servicio" aria-label="Buscar">
-                          <button class="btn btn-primary" type="submit">
-                            <i class="fas fa-search"></i>
+                        <input class="form-control" placeholder="Buscar servicio" >
+                          <button class="btn btn-primary" aria-label="Buscar">
+                            <em class="fas fa-search"></em>
                           </button>
                         </div>
                       </form>
@@ -176,16 +202,16 @@
                     <!-- FILA 1 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell " tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="fa-solid fa-key icono2" tabindex="0"></i>
+                            <div class="cell " tabindex="0" aria-label="Servicio uno">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Botón para conocer los servicios de claves"></em>
+                                <em class="fa-solid fa-key icono2" tabindex="0" aria-label="Icono con la figura de una llave para la opción claves"></em>
                                 <p class="text" tabindex="0">Claves</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="fa-solid fa-building-user icono2" tabindex="0"></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio dos">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Botón para conocer los servicios de RISE"></em>
+                                <em class="fa-solid fa-building-user icono2" tabindex="0" aria-label="Icono con la figura de un edificio para la opción RISE"></em>
                                 <p class="text" tabindex="0">RISE</p>
                             </div>
                         </div>
@@ -193,16 +219,16 @@
                     <!-- FILA 2 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="fa-regular fa-address-card icono2" tabindex="0"></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio tres">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Botón para conocer los servicios de RUC"></em>
+                                <em class="fa-regular fa-address-card icono2" tabindex="0" aria-label="Icono con la figura de una credencial de identidad para la opción RUC"></em>
                                 <p class="text" tabindex="0">RUC</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="fa-solid fa-hand-holding-dollar icono2" tabindex="0"></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio cuatro">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" aria-label="Botón para conocer los servicios de Facturación fisica"></em>
+                                <em class="fa-solid fa-hand-holding-dollar icono2" tabindex="0" role="button" aria-label="Icono con la figura de una mano recibiendo efectivo para la opción Facturación física"></em>
                                 <p class="text" tabindex="0">Facturación física</p>
                             </div>
                         </div>
@@ -210,16 +236,16 @@
                     <!-- FILA 3 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2"><iconify-icon icon="mdi:account-payment" tabindex="0"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio cinco">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" aria-label="Boton para conocer los servicios de Facturación electrónica"></em>
+                                <em class="icono2"><iconify-icon icon="mdi:account-payment" tabindex="0" role="button" aria-label="Icono con la figura de un usuario y su tarjeta bancaria para la opción Facturación electrónica"></iconify-icon></em>
                                 <p class="text" tabindex="0">Facturación electrónica</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2"><iconify-icon icon="mdi:document-sign" tabindex="0"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio seis">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" aria-label="Boton para conocer los servicios de declaraciones"></em>
+                                <em class="icono2"><iconify-icon icon="mdi:document-sign" tabindex="0"  aria-label="Icono con la figura de un documento firmado para la opción declaracione" ></iconify-icon></em>
                                 <p class="text" tabindex="0">Declaraciones</p>
                             </div>
                         </div>
@@ -227,16 +253,16 @@
                     <!-- FILA 4 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2"><iconify-icon icon="mdi:file-document-box-multiple" tabindex="0"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio siete">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de anexos"></em>
+                                <em class="icono2"><iconify-icon icon="mdi:file-document-box-multiple" tabindex="0" aria-label="Icono con la figura de varios documentos apilados para la opción anexos"></iconify-icon></em>
                                 <p class="text" tabindex="0">Anexos</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2"><iconify-icon icon="medical-icon:i-billing" tabindex="0"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio ocho">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de pagos"></em>
+                                <em class="icono2"><iconify-icon icon="medical-icon:i-billing" tabindex="0" aria-label="Icono con la figura de dos personas realizando una trasaccion monetaria para la opción pagos" ></iconify-icon></em>
                                 <p class="text" tabindex="0">Pagos</p>
                             </div>
                         </div>
@@ -244,16 +270,16 @@
                     <!-- FILA 5 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2"><iconify-icon icon="fa6-regular:money-bill-1" tabindex="0"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio nueve">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de deudas"></em>
+                                <em class="icono2"><iconify-icon icon="fa6-regular:money-bill-1" tabindex="0" aria-label="Icono con la figura de un billete de dolar para la opción deudas"></iconify-icon></em>
                                 <p class="text" tabindex="0">Deudas</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2"><iconify-icon icon="ri:refund-2-line" tabindex="0"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio diez">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de devoluciones"></em>
+                                <em class="icono2"><iconify-icon icon="ri:refund-2-line" tabindex="0" aria-label="Icono con el simbolo de dinero enmarcado en un ciclo continuo para la opción devoluciones" ></iconify-icon></em>
                                 <p class="text" tabindex="0">Devoluciones</p>
                             </div>
                         </div>
@@ -261,16 +287,16 @@
                     <!-- FILA 6 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2"><iconify-icon icon="vaadin:money-withdraw" tabindex="0"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio once">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de reintegro de valores"></em>
+                                <em class="icono2"><iconify-icon icon="vaadin:money-withdraw" tabindex="0" aria-label="Icono con la figura de un billete siendo devuelto para la opción reintegro de valores"></iconify-icon></em>
                                 <p class="text" tabindex="0">Reintegro de valores</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2" tabindex="0"><iconify-icon icon="material-symbols:chat-rounded"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio doce">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de tramite y notificaciones"></em>
+                                <em class="icono2" tabindex="0"><iconify-icon icon="material-symbols:chat-rounded" aria-label="Icono con la figura de un mensaje para la opción tramite y notificaciones"></iconify-icon></em>
                                 <p class="text" tabindex="0">Tramite y notificaciones</p>
                             </div>
                         </div>
@@ -278,16 +304,16 @@
                     <!-- FILA 7 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus"tabindex="0"></i>
-                                <i class="icono2" tabindex="0"><iconify-icon icon="mdi:certificate-outline"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio trece">
+                                <em class="fa-solid fa-circle-plus"tabindex="0" role="button" aria-label="Boton para conocer los servicios de certificación"></em>
+                                <em class="icono2" tabindex="0" aria-label="Icono con la figura de un documento verificado y aprobado para la opción certificación"><iconify-icon icon="mdi:certificate-outline" ></iconify-icon></em>
                                 <p class="text" tabindex="0">Certificados</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0" id="menuVehiculos" onclick="toggleSubmenuOpciones()">
-                                <i class="fa-solid fa-circle-plus" tabindex="0" ></i>
-                                <i class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car"></iconify-icon></i>
+                            <div role="button" id="VehiculoMOp" class="cell" tabindex="0" id="menuVehiculos" onclick="toggleSubmenuOpciones()" aria-label="Servicio catorce" aria-expanded="false">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de vehiculos"></em>
+                                <em class="icono2" tabindex="0" aria-label="Icono con la figura de un vehiculo para la opción vehiculos"><iconify-icon icon="material-symbols:directions-car" ></iconify-icon></em>
                                 <p class="text" tabindex="0">Vehiculos</p>
                             </div>
                             <div class="submenuOpciones" id="submenuOpciones" style="display: none;">
@@ -308,9 +334,9 @@
                     <!-- FILA 8 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="cell" tabindex="0">
-                                <i class="fa-solid fa-circle-plus" tabindex="0"></i>
-                                <i class="icono2" tabindex="0"><iconify-icon icon="ic:outline-miscellaneous-services"></iconify-icon></i>
+                            <div class="cell" tabindex="0" aria-label="Servicio quince">
+                                <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios extras"></em>
+                                <em class="icono2" tabindex="0" aria-label="Icono con la figura de unos engranajes para la opción servicio extras"><iconify-icon icon="ic:outline-miscellaneous-services" ></iconify-icon></em>
                                 <p class="text" tabindex="0">Otros servicios</p>
                             </div>
                         </div>
@@ -321,6 +347,8 @@
     </main>
     
     <script src="js/script_index.js"></script>
+    <script src="js/script_consulta.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

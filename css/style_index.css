@@ -68,7 +68,7 @@
 }
 
 /*Acomodar elementos de la barra*/
-.barraLateral .col i,
+.barraLateral .col em,
 .barraLateral .col p {
   display: inline-block;
   vertical-align: middle;
@@ -159,7 +159,7 @@
     cursor: pointer;
 }
   /* Iconos */
-.container .cell i {
+.container .cell em {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -169,11 +169,11 @@
     color: #104494;
 }  
 
-.cell i {
+.cell em {
     left: 5%;
 }
 
-.cell i:nth-of-type(2) {
+.cell em:nth-of-type(2) {
     left: 10%;
     margin-left: 10%;
 }
@@ -218,3 +218,11 @@
     background-color: lightblue;
 }
 
+/*Lenguaje y tamaño de letra*/
+.font-lng{
+    background-color: #2371E7;
+}
+.font-lng button{
+    background-color: #2371E7;
+    border: 0px;
+}
