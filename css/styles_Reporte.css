@@ -24,6 +24,11 @@
     font-weight: bolder;
 }
 
+.fuenteBolder2{
+   font-size: 15px;
+   font-weight: bolder;
+}
+
 #botonHamburguesa{
     border: none;
     color: white;
@@ -41,7 +46,7 @@
     font-size: 12px;
 }
 
-#botonIniciarSesion>i{
+#botonIniciarSesion>em{
     margin-right: 5px;
     padding: 4px;
     width: 30px;
@@ -91,9 +96,9 @@
  }
 
  .tabla4Elementos{
-    width: 40%;
-    height: 100px;
-    margin: 10px;
+    width: 540px;
+    height: 95px;
+    margin: 0px;
  }
 
  .tabla7Elementos{
@@ -126,6 +131,8 @@
 #detallesVehiculo{
     display: none;
 }
+
+
 
  
 

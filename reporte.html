@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles_Reporte.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles_informacion.css">
+    <link rel="stylesheet" href="css/style_index.css">
     <script src="https://kit.fontawesome.com/6ce83ec7a8.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Reporte de Pagos</title>
@@ -13,13 +14,140 @@
 <body class="container-fluid p-0 cuerpo">
     <header class="colorPrimario cabecera row">
         <div class="col d-flex align-items-center">
-            <button title="Menu" id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars"></button>
+            <button title="Servicios barra lateral" tabindex="0" id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars" onclick="menuBarraLateral()"></button>
             <img class="mx-3 logo float-start" src="imagenes/sri-en-linea.svg" alt="Logo SRI en línea">
         </div>
         <div class="col d-flex flex-row-reverse align-items-center">
-            <button id="botonIniciarSesion" class="colorPrimario mx-5 float-end"><i class="fa-solid fa-user"></i> Iniciar Sesión</button> 
+            <button tabindex="0" id="botonIniciarSesion" class="colorPrimario mx-5 float-end"><em class=" fa-solid fa-user"></em>
+                Iniciar Sesión</button>
         </div>
     </header>
+    <!---->
+    <div class="font-lng">
+        <button onclick="cambiarTamanoLetra(-1)" title="disminuir tamaño letra"><em class="fa-solid fa-circle-minus"></em></button>
+        <span>Tamaño de letra</span>
+        <button onclick="cambiarTamanoLetra(1)" title="aumentar tamaño letra"><em class="fa-solid fa-circle-plus"></em></button>
+    </div>
+
+    <!-- Menu de opciones -->
+    <div class="barraLateral" id="barraLateral" style="display: none;">
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="fa-solid fa-key icono2" ></i>
+                <p class="text" >CLAVES</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="fa-solid fa-building-user icono2" tabindex="0"></i>
+                <p class="text" >RISE</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="fa-regular fa-address-card icono2" tabindex="0"></i>
+                <p class="text" >RUC</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="fa-solid fa-hand-holding-dollar icono2" tabindex="0"></i>
+                <p class="text" >FACTURACIÓN FÍSICA</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2"><iconify-icon icon="mdi:account-payment" tabindex="0"></iconify-icon></i>
+                <p class="text" >FACTURACIÓN ELECTRÓNICA</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2"><iconify-icon icon="mdi:document-sign" tabindex="0"></iconify-icon></i>
+                <p class="text" >DECLARACIONES</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2"><iconify-icon icon="mdi:file-document-box-multiple" tabindex="0"></iconify-icon></i>
+                <p class="text" >ANEXOS</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2"><iconify-icon icon="medical-icon:i-billing" tabindex="0"></iconify-icon></i>
+                <p class="text" >PAGOS</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2"><iconify-icon icon="fa6-regular:money-bill-1" tabindex="0"></iconify-icon></i>
+                <p class="text" >DEUDAS</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2"><iconify-icon icon="ri:refund-2-line" tabindex="0"></iconify-icon></i>
+                <p class="text" >DEVOLUCIONES</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2"><iconify-icon icon="vaadin:money-withdraw" tabindex="0"></iconify-icon></i>
+                <p class="text" >REINTEGRO DE VALORES</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2" tabindex="0"><iconify-icon icon="material-symbols:chat-rounded"></iconify-icon></i>
+                <p class="text" >TRAMITE Y NOTIFICACIONES</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2" tabindex="0"><iconify-icon icon="mdi:certificate-outline"></iconify-icon></i>
+                <p class="text" >CERTIFICADOS</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0" onclick="opcionSubmenu()">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car"></iconify-icon></i>
+                <p class="text" tabindex="0">VEHÍCULOS</p>
+            </div>
+            <div id="submenu" style="display:none;">
+                <li tabindex="0">Valores a pagar por placa, RAMV, CPN, o chasis</li>
+                <li>
+                    <a href="consulta.html">Reporte de pagos</a>
+                </li>
+                <li tabindex="0">Plan exepcional de pagos del impuesto Ambiental</li>
+                <li tabindex="0">Consulta de subcategoria por trámite</li>
+                <li tabindex="0">Consulte sus vehículos</li>
+                <li tabindex="0">Exonere sus vehículos</li>
+                <li tabindex="0">Conozca más ...</li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" tabindex="0">
+                <i class="fa-solid fa-caret-right"></i>
+                <i class="icono2" tabindex="0"><iconify-icon icon="ic:outline-miscellaneous-services"></iconify-icon></i>
+                <p class="text" >OTROS SERVICIOS</p>
+            </div>
+        </div>
+    </div>
     <nav class="row">
         <div class="col d-flex">
             <nav>
@@ -64,7 +192,7 @@
                             <td class="fuenteBolder">2022</td>
                         </tr>
                     </table>
-                    <table  tabindex="0"        class="centrarTexto tabla4Elementos" border="1">
+                    <table  tabindex="0" class="my-2 centrarTexto tabla4Elementos" border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
                             <th>Marca</th>
                             <th>Modelo</th>
@@ -96,63 +224,81 @@
                 
             </div>
             <div id="detallesVehiculo" class="row borde">
-                <div class="col d-flex flex-wrap justify-content-around align-items-center">
-                    <table tabindex="0" class="my-3 centrarTexto tabla7Elementos"  border="1">
+                <div class="col d-flex flex-wrap justify-content-center align-items-center">
+                    <table tabindex="0" class="my-2 centrarTexto tabla4Elementos"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
                             <th>RAMV o CPN</th>
                             <th>Cantón</th>
                             <th>Clase</th>
-                            <th>Servicio</th>
-                            <th>Cilindraje</th>
-                            <th>Color 1</th>
-                            <th>Color 2</th>
+                            <th>Servicio</th> 
                         </tr>
                         <tr>
                             <td>AYM4521328</td>
                             <td>Quito</td>
                             <td>JEEP</td>
                             <td>Particular</td>
+                        </tr>
+                    </table>
+                    <table tabindex="0" class="my-2 centrarTexto tabla4Elementos"  border="1">
+                        <tr class="colorPrimario colorSecundarioFuente">
+                            
+                            <th>Cilindraje</th>
+                            <th>Color 1</th>
+                            <th>Color 2</th>
+                        </tr>
+                        <tr>
+                            
                             <td>2000</td>
                             <td>Blanco</td>
                             <td>Blanco</td>
                         </tr>
                     </table>
-                    <table tabindex="0" class="my-3 centrarTexto tabla7Elementos"  border="1">
+
+                    <table tabindex="0" class="my-3 centrarTexto tabla4Elementos"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
                             <th class="p-2">Estado Exoneración</th>
                             <th class="p-2">Prohibido Enajenar</th>
                             <th class="p-2">Fecha caducidad de la matrícula</th>
-                            <th class="p-2">Fecha última matrícula</th>
-                            <th class="p-2">Fecha Compra</th>
-                            <th class="p-2">Fecha matrícula anual</th>
+
                         </tr>
                         <tr>
                             <td>NO</td>
                             <td>NO</td>
                             <td>2026-12-05</td>
+                        </tr>
+                    </table>
+
+
+                    <table tabindex="0" class="my-3 centrarTexto tabla4Elementos"  border="1">
+                        <tr class="colorPrimario colorSecundarioFuente">
+                            <th class="p-2">Fecha última matrícula</th>
+                            <th class="p-2">Fecha Compra</th>
+                            <th class="p-2">Fecha matrícula anual</th>
+                        </tr>
+                        <tr>
                             <td>2021-12-06</td>
                             <td>2015-08-12</td>
                             <td>2022-07-02</td>
                         </tr>
                     </table>
-            </div>        
-        </div>
+                </div>        
+            </div>
         
-        <div class="container-fluid p-0">
-            <div class="mt-4 colorPrimario row ">
-                <h2 tabindex="0" class="titulo2 m-1">Reporte Pagos</h2>
-            </div>
+            <div class="container-fluid p-0">
+                <div class="mt-4 colorPrimario row ">
+                    <h2 tabindex="0" class="titulo2 m-1">Reporte Pagos</h2>
+                </div>
 
-            <div class="row">
-                <form action="">
-                    <label for="buscarReporte">Busqueda: </label>
-                    <input id="buscarReporte" type="text" name="buscarReporte" placeholder="Buscar por institución financiera, tipo de deuda o fecha de pago">
-                    <button title="buscar" class="border-0 bg-white" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-            </div>
+                <div class="row">
+                    <form action="">
+                        <label for="buscarReporte">Busqueda: </label>
+                        <input id="buscarReporte" type="text" name="buscarReporte" placeholder="Buscar por institución financiera, tipo de deuda o fecha de pago">
+                        <button title="buscar" class="border-0 bg-white" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
 
-            <div class="row">
-                <div class="col d-flex flex-wrap justify-content-around align-items-center">
+            <div  class="row">
+                <div  class="col d-flex flex-wrap justify-content-around align-items-center d-none d-md-flex">
                     <table tabindex="0" class="centrarTexto tablaReportes"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
                             <th scope="col">Placa, RAMV o CPN <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
@@ -210,24 +356,142 @@
                             <td><button class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
                         </tr>
                     </table>
-            </div>   
+                </div>   
+
+                <div id="seccionTarjetasReportes" class="row d-md-none">
+                    <div class="col d-flex flex-wrap justify-content-around align-items-center m-3">
+                        <div class="border colorSecundario">
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Placa, RAMV o CPN: </p><p>PCA 2445</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Institución Finaciera:  </p><p>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Fecha de pago: </p><p>2021-03-22 06:21</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Tipo de deuda: </p><p>PAGO DE VALOR DE LA MATRÍCULA</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Numero Comprobante: </p><p>12125689513264562315</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Valor Comprobante </p><p>$77.74</p>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-wrap justify-content-around align-items-center m-3">
+                        <div class="border colorSecundario">
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Placa, RAMV o CPN: </p><p>PCA 2445</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Institución Finaciera:  </p><p>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Fecha de pago: </p><p>2021-03-22 06:21</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Tipo de deuda: </p><p>PAGO DE VALOR DE LA MATRÍCULA</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Numero Comprobante: </p><p>12125689513264562315</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Valor Comprobante </p><p>$77.74</p>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-wrap justify-content-around align-items-center m-3">
+                        <div class="border colorSecundario">
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Placa, RAMV o CPN: </p><p>PCA 2445</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Institución Finaciera:  </p><p>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Fecha de pago: </p><p>2021-03-22 06:21</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Tipo de deuda: </p><p>PAGO DE VALOR DE LA MATRÍCULA</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Numero Comprobante: </p><p>12125689513264562315</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Valor Comprobante </p><p>$77.74</p>
+                            </div>    
+                        </div>
+                    </div>
+
+
+                    <div class="col d-flex flex-wrap justify-content-around align-items-center m-3">
+                        <div class="border colorSecundario">
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Placa, RAMV o CPN: </p><p>PCA 2445</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Institución Finaciera:  </p><p>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Fecha de pago: </p><p>2021-03-22 06:21</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Tipo de deuda: </p><p>PAGO DE VALOR DE LA MATRÍCULA</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Numero Comprobante: </p><p>12125689513264562315</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Valor Comprobante </p><p>$77.74</p>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-wrap justify-content-around align-items-center m-3">
+                        <div class="border colorSecundario">
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Placa, RAMV o CPN: </p><p>PCA 2445</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Institución Finaciera:  </p><p>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Fecha de pago: </p><p>2021-03-22 06:21</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Tipo de deuda: </p><p>PAGO DE VALOR DE LA MATRÍCULA</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Numero Comprobante: </p><p>12125689513264562315</p>
+                            </div>
+                            <div class="d-flex">
+                                <p class="fuenteBolder2 mx-1">Valor Comprobante </p><p>$77.74</p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>   
             
-            
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <nav>
-                        <ul class="d-flex m-3">
-                            <li><button title="tabla anterior" class="fa-solid fa-chevron-left"></button></li>
-                            <li><a class="colorprimarioFuente" href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                            <li><a href="">4</a></li>
-                            <li><a href="">5</a></li>
-                            <li><button title="tabla siguiente" class="fa-solid fa-angle-right"></button></li>
-                        </ul>
-                    </nav>
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <nav>
+                            <ul class="d-flex m-3">
+                                <li><button title="tabla anterior" class="fa-solid fa-chevron-left"></button></li>
+                                <li><a class="colorprimarioFuente" href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><button title="tabla siguiente" class="fa-solid fa-angle-right"></button></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
+            </div>    
         </div>
 
     </section>
@@ -324,5 +588,8 @@
     <div id="overlay"></div>
     <script src="./js/script_informacion.js"></script>
     <script src="js/script_reporte.js"></script>
+    <script src="js/script_consulta.js"></script>
+    <script src="js/script_index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
 </body>
 </html>
