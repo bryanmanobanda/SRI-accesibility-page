@@ -1,20 +1,24 @@
-function mostrar_advertencia(){
-    var valor = document.getElementById("ingresoDatos").value;
-    console.log("Ingreso1");
-    console.log(valor);
-    if (valor=="PCA2445"){
-        console.log("Ingreso");
-        document.getElementById("consulta_form").setAttribute("action", "reporte.html");
-        document.getElementById("consultar").setAttribute("type", "submit");
-    }
-    if(valor===""){
+function mostrar_advertencia() {
+	var valor = document.getElementById("ingresoDatos").value;
+	console.log("Ingreso1");
+	console.log(valor);
+	if (valor == "PCA2445") {
 
-    }
-    else{
-        document.getElementById('dialog-box').showModal();
-    }
+		document.getElementById("consulta_form").setAttribute("action", "reporte.html");
+		document.getElementById("consultar").setAttribute("type", "submit");
+	}
+	else {
+
+		if (valor === "") {
+			document.querySelector("#dialog-box p").textContent = "El valor de Placa, RAMV o CPN es requerido";
+			document.getElementById('dialog-box').showModal();
+		}
+		else {
+			document.querySelector("#dialog-box p").textContent = "Error: Ingresó una placa NO válida";
+			document.getElementById('dialog-box').showModal();
+		}
+	}
 }
-
 function cerrar_ventana(){
     document.getElementById('dialog-box').close();
 }
