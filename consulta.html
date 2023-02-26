@@ -21,7 +21,33 @@
 </head>
 
 <body class="container-fluid p-0">
-    
+
+    <!-- Barra cambiar tamaño de letra / Idioma -->
+
+    <div class="colorPrimario font-style">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <button class="rounded-circle" onclick="cambiarTamanoLetra(-1)" title="disminuir tamaño letra"><em class="fa-solid fa-circle-minus"></em></button>
+                <span>Tamaño de letra</span>
+                <button class="rounded-circle" onclick="cambiarTamanoLetra(1)" title="aumentar tamaño letra"><em class="fa-solid fa-circle-plus"></em></button>
+            </div>
+            <div class="col-md-6 text-end" >
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle font-style" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Seleccione un idioma
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('kc')">Kichwa</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('sh')">Shuar</a></li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <header class="colorPrimario cabecera row">
         <div class="col d-flex align-items-center">
             <button title="Servicios barra lateral" tabindex="0" id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars" onclick="menuBarraLateral()"></button>
@@ -32,150 +58,126 @@
                 Iniciar Sesión</button>
         </div>
     </header>
-    <!---->
-    <div class="font-lng">
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <button onclick="cambiarTamanoLetra(-1)" title="disminuir tamaño letra"><em class="fa-solid fa-circle-minus"></em></button>
-                <span>Tamaño de letra</span>
-                <button onclick="cambiarTamanoLetra(1)" title="aumentar tamaño letra"><em class="fa-solid fa-circle-plus"></em></button>
-            </div>
-            <div class="col-md-6 text-end" >
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      Seleccione un idioma
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                      <li><a class="dropdown-item" href="#">Español</a></li>
-                      <li><a class="dropdown-item" href="#">Kichwa</a></li>
-                      <li><a class="dropdown-item" href="#">Shuar</a></li>
-                    </ul>
-                  </div>
-            </div>
-        </div>
-        </div>
-    </div>
 
-    <!-- Menu de opciones -->
-    <div class="barraLateral" id="barraLateral" style="display: none;">
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-solid fa-key icono2" ></i>
-                <p class="text" >CLAVES</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-solid fa-building-user icono2" tabindex="0"></i>
-                <p class="text" >RISE</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-regular fa-address-card icono2" tabindex="0"></i>
-                <p class="text" >RUC</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="fa-solid fa-hand-holding-dollar icono2" tabindex="0"></i>
-                <p class="text" >FACTURACIÓN FÍSICA</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="mdi:account-payment" tabindex="0"></iconify-icon></i>
-                <p class="text" >FACTURACIÓN ELECTRÓNICA</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="mdi:document-sign" tabindex="0"></iconify-icon></i>
-                <p class="text" >DECLARACIONES</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="mdi:file-document-box-multiple" tabindex="0"></iconify-icon></i>
-                <p class="text" >ANEXOS</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="medical-icon:i-billing" tabindex="0"></iconify-icon></i>
-                <p class="text" >PAGOS</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="fa6-regular:money-bill-1" tabindex="0"></iconify-icon></i>
-                <p class="text" >DEUDAS</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="ri:refund-2-line" tabindex="0"></iconify-icon></i>
-                <p class="text" >DEVOLUCIONES</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2"><iconify-icon icon="vaadin:money-withdraw" tabindex="0"></iconify-icon></i>
-                <p class="text" >REINTEGRO DE VALORES</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0"><iconify-icon icon="material-symbols:chat-rounded"></iconify-icon></i>
-                <p class="text" >TRAMITE Y NOTIFICACIONES</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0"><iconify-icon icon="mdi:certificate-outline"></iconify-icon></i>
-                <p class="text" >CERTIFICADOS</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0" onclick="opcionSubmenu()">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car"></iconify-icon></i>
-                <p class="text" tabindex="0">VEHÍCULOS</p>
-            </div>
-            <div id="submenu" style="display:none;">
-                <li tabindex="0">Valores a pagar por placa, RAMV, CPN, o chasis</li>
-                <li>
-                    <a href="consulta.html">Reporte de pagos</a>
-                </li>
-                <li tabindex="0">Plan exepcional de pagos del impuesto Ambiental</li>
-                <li tabindex="0">Consulta de subcategoria por trámite</li>
-                <li tabindex="0">Consulte sus vehículos</li>
-                <li tabindex="0">Exonere sus vehículos</li>
-                <li tabindex="0">Conozca más ...</li>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" tabindex="0">
-                <i class="fa-solid fa-caret-right"></i>
-                <i class="icono2" tabindex="0"><iconify-icon icon="ic:outline-miscellaneous-services"></iconify-icon></i>
-                <p class="text" >OTROS SERVICIOS</p>
-            </div>
+   <!-- Menu de opciones -->
+   <div class="barraLateral" id="barraLateral" style="display: none;">
+    <div class="row">
+        <div class="col" tabindex="0" id="primeraOpcion">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="fa-solid fa-key icono2" aria-label="Icono con la figura de una llave para la opción"></em>
+            <p class="text" tabindex="0" >CLAVES</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="fa-solid fa-building-user icono2"  aria-label="Icono con la figura de un edificio para la opción"></em>
+            <p class="text" tabindex="0" >RISE</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="fa-regular fa-address-card icono2"  aria-label="Icono con la figura de una credencial de identidad para la opción"></em>
+            <p class="text" tabindex="0" >RUC</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="fa-solid fa-hand-holding-dollar icono2"  aria-label="Icono con la figura de una mano recibiendo efectivo para la opción"></em>
+            <p class="text" tabindex="0" >FACTURACIÓN FÍSICA</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2"><iconify-icon icon="mdi:account-payment"  aria-label="Icono con la figura de un usuario y su tarjeta bancaria para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >FACTURACIÓN ELECTRÓNICA</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2"><iconify-icon icon="mdi:document-sign"  aria-label="Icono con la figura de un documento firmado para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >DECLARACIONES</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2"><iconify-icon icon="mdi:file-document-box-multiple"  aria-label="Icono con la figura de varios documentos apilados para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >ANEXOS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2"><iconify-icon icon="medical-icon:i-billing"  aria-label="Icono con la figura de dos personas realizando una trasaccion monetaria para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >PAGOS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2"><iconify-icon icon="fa6-regular:money-bill-1"  aria-label="Icono con la figura de un billete de dolar para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >DEUDAS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2"><iconify-icon icon="ri:refund-2-line"  aria-label="Icono con el simbolo de dinero enmarcado en un ciclo continuo para la opción"></iconify-icon></em> 
+            <p class="text" tabindex="0" >DEVOLUCIONES</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2"><iconify-icon icon="vaadin:money-withdraw"  aria-label="Icono con la figura de un billete siendo devuelto para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >REINTEGRO DE VALORES</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2" ><iconify-icon icon="material-symbols:chat-rounded" aria-label="Icono con la figura de un mensaje para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >TRAMITE Y NOTIFICACIONES</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2" ><iconify-icon icon="mdi:certificate-outline" aria-label="Icono con la figura de un documento verificado y aprobado para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >CERTIFICADOS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div role="button" class="col" id="VehiculoML" tabindex="0" onclick="opcionSubmenu()" aria-label="Accionar para más opciones de Vehiculos" aria-expanded="false">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2" tabindex="0" ><iconify-icon icon="material-symbols:directions-car" aria-label="Icono con la figura de un vehiculo para la opción vehiculos"></iconify-icon></em>
+            <p class="text" tabindex="0" >VEHÍCULOS</p>
+        </div>
+        <div id="submenu" style="display:none;">
+            <li tabindex="0">Valores a pagar por placa, RAMV, CPN, o chasis</li>
+            <li>
+                <a href="consulta.html">Reporte de pagos</a>
+            </li>
+            <li tabindex="0">Plan exepcional de pagos del impuesto Ambiental</li>
+            <li tabindex="0">Consulta de subcategoria por trámite</li>
+            <li tabindex="0">Consulte sus vehículos</li>
+            <li tabindex="0">Exonere sus vehículos</li>
+            <li tabindex="0">Conozca más ...</li>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" tabindex="0">
+            <em class="fa-solid fa-caret-right"></em>
+            <em class="icono2" ><iconify-icon icon="ic:outline-miscellaneous-services" aria-label="Icono con la figura de unos engranajes para la opción"></iconify-icon></em>
+            <p class="text" tabindex="0" >OTROS SERVICIOS</p>
+        </div>
+    </div>
+</div>
 
     <nav class="row">
         <div class="col d-flex">

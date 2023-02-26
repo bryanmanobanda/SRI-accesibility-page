@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <!-- Metadatos -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titulo -->
-    <title>SRI en Línea - Inicio</title>
-    <!-- Favicon -->
-    <link rel="icon" type:"image/x-icon" href="imagenes/favicon.ico">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style_index.css">
-    <!-- Iconos -->
-    <script src="https://kit.fontawesome.com/6ce83ec7a8.js" crossorigin="anonymous"></script>
-</head>
-<body class="container-fluid p-0">
+    <head>
+        <!-- Metadatos -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Titulo -->
+        <title>SRI en Línea - Inicio</title>
+        <!-- Favicon -->
+        <link rel="icon" type:"image/x-icon" href="imagenes/favicon.ico">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style_index.css">
+        <!-- Iconos -->
+        <script src="https://kit.fontawesome.com/6ce83ec7a8.js" crossorigin="anonymous"></script>
+    </head>
+<body class="container-fluid p-0 vsc-initialized">
+    <!-- Barra cambiar tamaño de letra / Idioma -->
+    
+    <div class="colorPrimario font-style">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <button class="rounded-circle" onclick="cambiarTamanoLetra(-1)" title="disminuir tamaño letra"><em class="fa-solid fa-circle-minus"></em></button>
+                <span>Tamaño de letra</span>
+                <button class="rounded-circle" onclick="cambiarTamanoLetra(1)" title="aumentar tamaño letra"><em class="fa-solid fa-circle-plus"></em></button>
+            </div>
+            <div class="col-md-6 text-end" >
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle font-style" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Seleccione un idioma
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                      <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="setLanguage('kc')">Kichwa</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="setLanguage('sh')">Shuar</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        </div>
+    </div>
     <header class="colorPrimario cabecera row" tabindex="0" aria-label="Barra de navegación">
         <div class="col d-flex align-items-center">
             <button  id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars" onclick="menuBarraLateral()"  aria-label="Accionar para abrir menu" aria-expanded="false"></button>
@@ -27,32 +52,6 @@
                 Iniciar Sesión</button>
         </div>
     </header>
-
-    <!-- Barra cambiar tamaño de letra / Idioma -->
-       
-    <div class="font-lng">
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <button onclick="cambiarTamanoLetra(-1)" title="disminuir tamaño letra"><em class="fa-solid fa-circle-minus"></em></button>
-                <span>Tamaño de letra</span>
-                <button onclick="cambiarTamanoLetra(1)" title="aumentar tamaño letra"><em class="fa-solid fa-circle-plus"></em></button>
-            </div>
-            <div class="col-md-6 text-end" >
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      Seleccione un idioma
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                      <li><a class="dropdown-item" href="#">Español</a></li>
-                      <li><a class="dropdown-item" href="#">Kichwa</a></li>
-                      <li><a class="dropdown-item" href="#">Shuar</a></li>
-                    </ul>
-                  </div>
-            </div>
-        </div>
-        </div>
-    </div>
     <!-- Menu de opciones -->
     <div class="barraLateral" id="barraLateral" style="display: none;">
         <div class="row">

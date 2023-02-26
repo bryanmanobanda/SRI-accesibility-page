@@ -219,10 +219,17 @@
 }
 
 /*Lenguaje y tamaño de letra*/
-.font-lng{
-    background-color: #2371E7;
+.font-style{
+    color: #fff;
+    font-size: 15px;
+    text-align: start;
+    font-weight: bolder;
+    padding: 5px 0px 0px 0px;
 }
-.font-lng button{
-    background-color: #2371E7;
-    border: 0px;
+.dropdown .font-style {
+    color: #fff;
+    font-size: 15px;
+    text-align: start;
+    font-weight: bolder;
+    padding: 5px 0px 0px 0px;
 }
