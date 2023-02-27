@@ -15,7 +15,7 @@
     <header class="colorPrimario cabecera row">
         <div class="col d-flex align-items-center">
             <button title="Servicios barra lateral" tabindex="0" id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars" onclick="menuBarraLateral()"></button>
-            <img class="mx-3 logo float-start" src="imagenes/sri-en-linea.svg" alt="Logo SRI en línea">
+            <img tabindex="0" class="mx-3 logo float-start" src="imagenes/sri-en-linea.svg" alt="Logo SRI en línea">
         </div>
         <div class="col d-flex flex-row-reverse align-items-center">
             <button tabindex="0" id="botonIniciarSesion" class="colorPrimario mx-5 float-end"><em class=" fa-solid fa-user"></em>
@@ -175,35 +175,35 @@
             </div>
             <div class="row">
                 <div class="col d-flex flex-wrap justify-content-around align-items-center">
-                    <em id="iconoAuto" class="fa-solid fa-car"></em>
+                    <em tabindex="0" id="iconoAuto" title="Icono Auto" class="fa-solid fa-car"></em>
                     <table tabindex="0" class="centrarTexto tabla1Elemento"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
-                            <th>Placa</th>
+                            <th tabindex="0">Placa</th>
                         </tr>
                         <tr>
-                            <td class="fuenteBolder">PCA 2445</td>
+                            <td tabindex="0" class="fuenteBolder">PCA 2445</td>
                         </tr>
                     </table>   
                     <table tabindex="0" class="centrarTexto tabla1Elemento" border="1">
                         <tr  class="colorSecundario">
-                            <th>Ultimo año de pago:</th>
+                            <th tabindex="0">Ultimo año de pago:</th>
                         </tr>
                         <tr>
-                            <td class="fuenteBolder">2022</td>
+                            <td tabindex="0" class="fuenteBolder">2022</td>
                         </tr>
                     </table>
                     <table  tabindex="0" class="my-2 centrarTexto tabla4Elementos" border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Año de modelo</th>
-                            <th>País</th>
+                            <th scope="col" tabindex="0" aria-label="Columna Marca">Marca</th>
+                            <th tabindex="0" aria-label="Columna Modelos">Modelo</th>
+                            <th tabindex="0" aria-label="Columna Año Modelo">Año de modelo</th>
+                            <th tabindex="0" aria-label="Columna País">País</th>
                         </tr>
                         <tr>
-                            <td>KIA</td>
-                            <td>SPORTAGE LX DAB AC 2.0 4P 4X2 TA</td>
-                            <td>2016</td>
-                            <td>Ecuador</td>
+                            <td tabindex="0">KIA</td>
+                            <td tabindex="0" >SPORTAGE LX DAB AC 2.0 4P 4X2 TA</td>
+                            <td tabindex="0">2016</td>
+                            <td tabindex="0">Ecuador</td>
                         </tr>
                     </table>
                     
@@ -227,58 +227,58 @@
                 <div class="col d-flex flex-wrap justify-content-center align-items-center">
                     <table tabindex="0" class="my-2 centrarTexto tabla4Elementos"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
-                            <th>RAMV o CPN</th>
-                            <th>Cantón</th>
-                            <th>Clase</th>
-                            <th>Servicio</th> 
+                            <th scope="col" tabindex="0" aria-label="Columna RAMV o CPN">RAMV o CPN</th>
+                            <th  tabindex="0" aria-label="Columna Cantón">Cantón</th>
+                            <th  tabindex="0" aria-label="Columna Clase">Clase</th>
+                            <th  tabindex="0" aria-label="Columna Servicios">Servicio</th> 
                         </tr>
                         <tr>
-                            <td>AYM4521328</td>
-                            <td>Quito</td>
-                            <td>JEEP</td>
-                            <td>Particular</td>
+                            <td tabindex="0">AYM4521328</td>
+                            <td tabindex="0">Quito</td>
+                            <td tabindex="0">JEEP</td>
+                            <td tabindex="0">Particular</td>
                         </tr>
                     </table>
                     <table tabindex="0" class="my-2 centrarTexto tabla4Elementos"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
                             
-                            <th>Cilindraje</th>
-                            <th>Color 1</th>
-                            <th>Color 2</th>
+                            <th scope="col" tabindex="0" aria-label="Columna Cilindraje">Cilindraje</th>
+                            <th tabindex="0" aria-label="Columna Color 1">Color 1</th>
+                            <th tabindex="0" aria-label="Columna Color 2">Color 2</th>
                         </tr>
                         <tr>
                             
-                            <td>2000</td>
-                            <td>Blanco</td>
-                            <td>Blanco</td>
+                            <td tabindex="0">2000</td>
+                            <td tabindex="0">Blanco</td>
+                            <td tabindex="0">Blanco</td>
                         </tr>
                     </table>
 
                     <table tabindex="0" class="my-3 centrarTexto tabla4Elementos"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
-                            <th class="p-2">Estado Exoneración</th>
-                            <th class="p-2">Prohibido Enajenar</th>
-                            <th class="p-2">Fecha caducidad de la matrícula</th>
+                            <th scope="col" tabindex="0" aria-label="Columna Estado Exoneración" class="p-2">Estado Exoneración</th>
+                            <th tabindex="0" aria-label="Columna Prohibido Enajenar" class="p-2">Prohibido Enajenar</th>
+                            <th tabindex="0" aria-label="Columna Fecha caducidad de la matrícula" class="p-2">Fecha caducidad de la matrícula</th>
 
                         </tr>
                         <tr>
-                            <td>NO</td>
-                            <td>NO</td>
-                            <td>2026-12-05</td>
+                            <td tabindex="0">NO</td>
+                            <td tabindex="0">NO</td>
+                            <td tabindex="0">2026-12-05</td>
                         </tr>
                     </table>
 
 
                     <table tabindex="0" class="my-3 centrarTexto tabla4Elementos"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
-                            <th class="p-2">Fecha última matrícula</th>
-                            <th class="p-2">Fecha Compra</th>
-                            <th class="p-2">Fecha matrícula anual</th>
+                            <th scope="col" tabindex="0" aria-label="Columna Fecha última matrícula" class="p-2">Fecha última matrícula</th>
+                            <th tabindex="0" aria-label="Columna Fecha compra" class="p-2">Fecha Compra</th>
+                            <th tabindex="0" aria-label="Columna Fecha matrícula anual" class="p-2">Fecha matrícula anual</th>
                         </tr>
                         <tr>
-                            <td>2021-12-06</td>
-                            <td>2015-08-12</td>
-                            <td>2022-07-02</td>
+                            <td tabindex="0">2021-12-06</td>
+                            <td tabindex="0">2015-08-12</td>
+                            <td tabindex="0">2022-07-02</td>
                         </tr>
                     </table>
                 </div>        
@@ -301,59 +301,58 @@
                 <div  class="col d-flex flex-wrap justify-content-around align-items-center d-none d-md-flex">
                     <table tabindex="0" class="centrarTexto tablaReportes"  border="1">
                         <tr class="colorPrimario colorSecundarioFuente">
-                            <th scope="col">Placa, RAMV o CPN <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
-                            <th>Institución Finaciera <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
-                            <th>Fecha de pago <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
-                            <th>Tipo de deuda <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
-                            <th>Numero Comprobante</th>
-                            <th>Valor Comprobante <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
-                            <th>Detalles</th>
+                            <th scope="col" tabindex="0" aria-label="Columna Placa, RAMV o CPN">Placa, RAMV o CPN <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                            <th tabindex="0" aria-label="Columna Institución Financiera">Institución Finaciera <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                            <th tabindex="0" aria-label="Columna Fecha de pago">Fecha de pago <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                            <th tabindex="0" aria-label="Columna Tipo de deuda">Tipo de deuda <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                            <th tabindex="0" aria-label="Columna Número Comprobante">Numero Comprobante</th>
+                            <th tabindex="0" aria-label="Columna Valor Comprobante">Valor Comprobante <i class="colorSecundarioFuente fa-sharp fa-solid fa-caret-down"></i></th>
+                            <th tabindex="0" aria-label="Columna Detalles">Detalles</th>
                         </tr>
-                        <tr>
-                            <td>PCA 2445</td>
-                            <td>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
-                            <td>2021-03-22 06:21</td>
-                            <td>PAGO DE VALOR DE LA MATRÍCULA</td>
-                            <td>12125689513264562315</td>
-                            <td>$77.74</td>
-                            <td>
-                                <button title="ver reporte" class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button title="descargar reporte" class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
+                        <tr tabindex="0" aria-label="Fila 1">
+                            <td tabindex="0">PCA 2445</td>
+                            <td tabindex="0">COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
+                            <td tabindex="0">2021-03-22 06:21</td>
+                            <td tabindex="0">PAGO DE VALOR DE LA MATRÍCULA</td>
+                            <td tabindex="0">12125689513264562315</td>
+                            <td tabindex="0">$77.74</td>
+                            <td tabindex="0"><span tabindex="0" title="ver reporte" class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></span><span tabindex="0" title="descargar reporte" class="bg-white border-0 fa-sharp fa-solid fa-download"></span></td>
                         </tr>
-                        <tr class="colorSecundario">
-                            <td>PCA 2445</td>
-                            <td>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
-                            <td>2021-03-22 06:21</td>
-                            <td>PAGO DE VALOR DE LA MATRÍCULA</td>
-                            <td>12125689513264562315</td>
-                            <td>$77.74</td>
-                            <td><button class="colorSecundario border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="colorSecundario border-0 fa-sharp fa-solid fa-download"></button></td>
+                        <tr tabindex="0" aria-label="Fila 2" class="colorSecundario">
+                            <td tabindex="0">PCA 2445</td>
+                            <td tabindex="0">COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
+                            <td tabindex="0">2021-03-22 06:21</td>
+                            <td tabindex="0">PAGO DE VALOR DE LA MATRÍCULA</td>
+                            <td tabindex="0">12125689513264562315</td>
+                            <td tabindex="0">$77.74</td>
+                            <td tabindex="0"><span tabindex="0" title="ver reporte" type="button" class="colorSecundario border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></span><span tabindex="0" title="descargar reporte" class="colorSecundario border-0 fa-sharp fa-solid fa-download"></span></td>
                         </tr>
-                        <tr>
-                            <td>PCA 2445</td>
-                            <td>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
-                            <td>2021-03-22 06:21</td>
-                            <td>PAGO DE VALOR DE LA MATRÍCULA</td>
-                            <td>12125689513264562315</td>
-                            <td>$77.74</td>
-                            <td><button class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
+                        <tr tabindex="0" aria-label="Fila 3">
+                            <td tabindex="0">PCA 2445</td>
+                            <td tabindex="0">COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
+                            <td tabindex="0">2021-03-22 06:21</td>
+                            <td tabindex="0">PAGO DE VALOR DE LA MATRÍCULA</td>
+                            <td tabindex="0">12125689513264562315</td>
+                            <td tabindex="0">$77.74</td>
+                            <td tabindex="0"><span tabindex="0" title="ver reporte" type="button" class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></span><span tabindex="0" title="descargar reporte" class="bg-white border-0 fa-sharp fa-solid fa-download"></span></td>
                         </tr>
-                        <tr class="colorSecundario">
-                            <td>PCA 2445</td>
-                            <td>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
-                            <td>2021-03-22 06:21</td>
-                            <td>PAGO DE VALOR DE LA MATRÍCULA</td>
-                            <td>12125689513264562315</td>
-                            <td>$77.74</td>
-                            <td><button class="colorSecundario border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="colorSecundario border-0 fa-sharp fa-solid fa-download"></button></td>
+                        <tr tabindex="0" aria-label="Fila 4" class="colorSecundario">
+                            <td tabindex="0">PCA 2445</td>
+                            <td tabindex="0">COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
+                            <td tabindex="0">2021-03-22 06:21</td>
+                            <td tabindex="0">PAGO DE VALOR DE LA MATRÍCULA</td>
+                            <td tabindex="0">12125689513264562315</td>
+                            <td tabindex="0">$77.74</td>
+                            <td tabindex="0"><span tabindex="0" title="ver reporte" type="button" class="colorSecundario border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></span><span tabindex="0" title="descargar reporte" class="colorSecundario border-0 fa-sharp fa-solid fa-download"></span></td>
                         </tr>
-                        <tr>
-                            <td>PCA 2445</td>
-                            <td>COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
-                            <td>2021-03-22 06:21</td>
-                            <td>PAGO DE VALOR DE LA MATRÍCULA</td>
-                            <td>12125689513264562315</td>
-                            <td>$77.74</td>
-                            <td><button class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></button><button class="bg-white border-0 fa-sharp fa-solid fa-download"></button></td>
+                        <tr tabindex="0" aria-label="Fila 5">
+                            <td tabindex="0">PCA 2445</td>
+                            <td tabindex="0">COOPERATIVA DE AHORRO Y CRÉDITO 29 DE OCTUBRE LTDA.</td>
+                            <td tabindex="0">2021-03-22 06:21</td>
+                            <td tabindex="0">PAGO DE VALOR DE LA MATRÍCULA</td>
+                            <td tabindex="0">12125689513264562315</td>
+                            <td tabindex="0">$77.74</td>
+                            <td tabindex="0"><span tabindex="0" title="ver reporte" type="button" class="bg-white border-0 fa-solid fa-eye" onclick="mostrar_detalle()"></span><span tabindex="0" title="descargar reporte" class="bg-white border-0 fa-sharp fa-solid fa-download"></span></td>
                         </tr>
                     </table>
                 </div>   
