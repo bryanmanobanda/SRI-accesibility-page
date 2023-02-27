@@ -22,7 +22,7 @@
     font-size: 12px;
 }
 
-#botonIniciarSesion>i {
+#botonIniciarSesion>em {
     margin-right: 5px;
     padding: 4px;
     width: 30px;
@@ -179,11 +179,11 @@
 }
   
 .matriz .text {
-    margin: 0;
-    text-align: center;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 20%;
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 35%;
 }
   
 .matriz .row {
@@ -195,6 +195,10 @@
       height: 80px;
       margin-top: 1%;
       margin-bottom: 1%;
+      display: flex;
+      
+      align-items: center;
+
     }
 }
 

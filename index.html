@@ -45,10 +45,10 @@
     <header class="colorPrimario cabecera row" tabindex="0" aria-label="Barra de navegación">
         <div class="col d-flex align-items-center">
             <button  id="botonHamburguesa" class="colorPrimario mx-3 float-start fa-solid fa-bars" onclick="menuBarraLateral()"  aria-label="Accionar para abrir menu" aria-expanded="false"></button>
-            <img tabindex="0" class="mx-3 logo float-start" src="imagenes/sri-en-linea.svg" alt="Logo del Servicio de Rentas internas SRI, en línea">
+            <img tabindex="0" class="mx-3 logo float-start" src="imagenes/sri-en-linea.svg" alt="En la imagen se muestra el logo del Servicio de Rentas internas SRI.">
         </div>
         <div class="col d-flex flex-row-reverse align-items-center">
-            <button id="botonIniciarSesion" class="colorPrimario mx-5 float-end"><i class=" fa-solid fa-user"></i>
+            <button id="botonIniciarSesion" class="colorPrimario mx-5 float-end"><em class=" fa-solid fa-user"></em>
                 Iniciar Sesión</button>
         </div>
     </header>
@@ -154,7 +154,7 @@
             <div id="submenu" style="display:none;">
                 <li tabindex="0">Valores a pagar por placa, RAMV, CPN, o chasis</li>
                 <li>
-                    <a href="consulta.html">Reporte de pagos</a>
+                    <a href="consulta.html" aria-label="Reporte de pagos" rel="alternate">Reporte de pagos</a>
                 </li>
                 <li tabindex="0">Plan exepcional de pagos del impuesto Ambiental</li>
                 <li tabindex="0">Consulta de subcategoria por trámite</li>
@@ -188,7 +188,12 @@
                 <div class="col">
                     <form class="d-flex busqueda">
                         <div class="input-group">
-                        <input class="form-control" placeholder="Buscar servicio" >
+                            <!-- <input class="form-control" placeholder="Buscar servicio" > -->
+                        
+                            <input id="buscar-servicio" class="form-control" placeholder="Escribe aquí el servicio que buscas">
+                            <label for="buscar-servicio" style="display: none;">Buscar servicio:</label>
+                            
+
                           <button class="btn btn-primary" aria-label="Buscar">
                             <em class="fas fa-search"></em>
                           </button>
@@ -204,14 +209,14 @@
                             <div class="cell " tabindex="0" aria-label="Servicio uno">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Botón para conocer los servicios de claves"></em>
                                 <em class="fa-solid fa-key icono2" tabindex="0" aria-label="Icono con la figura de una llave para la opción claves"></em>
-                                <p class="text" tabindex="0">Claves</p>
+                                <strong class="text" tabindex="0">Claves</strong>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cell" tabindex="0" aria-label="Servicio dos">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Botón para conocer los servicios de RISE"></em>
                                 <em class="fa-solid fa-building-user icono2" tabindex="0" aria-label="Icono con la figura de un edificio para la opción RISE"></em>
-                                <p class="text" tabindex="0">RISE</p>
+                                <strong class="text" tabindex="0">RISE</strong>
                             </div>
                         </div>
                     </div>
@@ -221,14 +226,14 @@
                             <div class="cell" tabindex="0" aria-label="Servicio tres">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Botón para conocer los servicios de RUC"></em>
                                 <em class="fa-regular fa-address-card icono2" tabindex="0" aria-label="Icono con la figura de una credencial de identidad para la opción RUC"></em>
-                                <p class="text" tabindex="0">RUC</p>
+                                <strong class="text" tabindex="0">RUC</strong>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cell" tabindex="0" aria-label="Servicio cuatro">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" aria-label="Botón para conocer los servicios de Facturación fisica"></em>
                                 <em class="fa-solid fa-hand-holding-dollar icono2" tabindex="0" role="button" aria-label="Icono con la figura de una mano recibiendo efectivo para la opción Facturación física"></em>
-                                <p class="text" tabindex="0">Facturación física</p>
+                                <strong class="text" tabindex="0">Facturación física</strong>
                             </div>
                         </div>
                     </div>
@@ -238,14 +243,14 @@
                             <div class="cell" tabindex="0" aria-label="Servicio cinco">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" aria-label="Boton para conocer los servicios de Facturación electrónica"></em>
                                 <em class="icono2"><iconify-icon icon="mdi:account-payment" tabindex="0" role="button" aria-label="Icono con la figura de un usuario y su tarjeta bancaria para la opción Facturación electrónica"></iconify-icon></em>
-                                <p class="text" tabindex="0">Facturación electrónica</p>
+                                <strong class="text" tabindex="0">Facturación electrónica</strong>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cell" tabindex="0" aria-label="Servicio seis">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" aria-label="Boton para conocer los servicios de declaraciones"></em>
                                 <em class="icono2"><iconify-icon icon="mdi:document-sign" tabindex="0"  aria-label="Icono con la figura de un documento firmado para la opción declaracione" ></iconify-icon></em>
-                                <p class="text" tabindex="0">Declaraciones</p>
+                                <strong class="text" tabindex="0">Declaraciones</strong>
                             </div>
                         </div>
                     </div>
@@ -255,14 +260,14 @@
                             <div class="cell" tabindex="0" aria-label="Servicio siete">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de anexos"></em>
                                 <em class="icono2"><iconify-icon icon="mdi:file-document-box-multiple" tabindex="0" aria-label="Icono con la figura de varios documentos apilados para la opción anexos"></iconify-icon></em>
-                                <p class="text" tabindex="0">Anexos</p>
+                                <strong class="text" tabindex="0">Anexos</strong>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cell" tabindex="0" aria-label="Servicio ocho">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de pagos"></em>
                                 <em class="icono2"><iconify-icon icon="medical-icon:i-billing" tabindex="0" aria-label="Icono con la figura de dos personas realizando una trasaccion monetaria para la opción pagos" ></iconify-icon></em>
-                                <p class="text" tabindex="0">Pagos</p>
+                                <strong class="text" tabindex="0">Pagos</strong>
                             </div>
                         </div>
                     </div>
@@ -272,14 +277,14 @@
                             <div class="cell" tabindex="0" aria-label="Servicio nueve">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de deudas"></em>
                                 <em class="icono2"><iconify-icon icon="fa6-regular:money-bill-1" tabindex="0" aria-label="Icono con la figura de un billete de dolar para la opción deudas"></iconify-icon></em>
-                                <p class="text" tabindex="0">Deudas</p>
+                                <strong class="text" tabindex="0">Deudas</strong>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cell" tabindex="0" aria-label="Servicio diez">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de devoluciones"></em>
                                 <em class="icono2"><iconify-icon icon="ri:refund-2-line" tabindex="0" aria-label="Icono con el simbolo de dinero enmarcado en un ciclo continuo para la opción devoluciones" ></iconify-icon></em>
-                                <p class="text" tabindex="0">Devoluciones</p>
+                                <strong class="text" tabindex="0">Devoluciones</strong>
                             </div>
                         </div>
                     </div>
@@ -289,14 +294,14 @@
                             <div class="cell" tabindex="0" aria-label="Servicio once">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de reintegro de valores"></em>
                                 <em class="icono2"><iconify-icon icon="vaadin:money-withdraw" tabindex="0" aria-label="Icono con la figura de un billete siendo devuelto para la opción reintegro de valores"></iconify-icon></em>
-                                <p class="text" tabindex="0">Reintegro de valores</p>
+                                <strong class="text" tabindex="0">Reintegro de valores</strong>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="cell" tabindex="0" aria-label="Servicio doce">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de tramite y notificaciones"></em>
                                 <em class="icono2" tabindex="0"><iconify-icon icon="material-symbols:chat-rounded" aria-label="Icono con la figura de un mensaje para la opción tramite y notificaciones"></iconify-icon></em>
-                                <p class="text" tabindex="0">Tramite y notificaciones</p>
+                                <strong class="text" tabindex="0">Tramite y notificaciones</strong>
                             </div>
                         </div>
                     </div>
@@ -306,20 +311,20 @@
                             <div class="cell" tabindex="0" aria-label="Servicio trece">
                                 <em class="fa-solid fa-circle-plus"tabindex="0" role="button" aria-label="Boton para conocer los servicios de certificación"></em>
                                 <em class="icono2" tabindex="0" aria-label="Icono con la figura de un documento verificado y aprobado para la opción certificación"><iconify-icon icon="mdi:certificate-outline" ></iconify-icon></em>
-                                <p class="text" tabindex="0">Certificados</p>
+                                <strong class="text" tabindex="0">Certificados</strong>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div role="button" id="VehiculoMOp" class="cell" tabindex="0" id="menuVehiculos" onclick="toggleSubmenuOpciones()" aria-label="Servicio catorce" aria-expanded="false">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios de vehiculos"></em>
                                 <em class="icono2" tabindex="0" aria-label="Icono con la figura de un vehiculo para la opción vehiculos"><iconify-icon icon="material-symbols:directions-car" ></iconify-icon></em>
-                                <p class="text" tabindex="0">Vehiculos</p>
+                                <strong class="text" tabindex="0">Vehiculos</strong>
                             </div>
                             <div class="submenuOpciones" id="submenuOpciones" style="display: none;">
                                 <ul>
                                     <li tabindex="0">Valores a pagar por placa, RAMV, CPN, o chasis</li>
                                     <li>
-                                        <a href="consulta.html">Reporte de pagos</a>
+                                        <a href="consulta.html"  aria-label="El enlace dirige al reporte de pagos">Reporte de pagos</a>
                                     </li>
                                     <li tabindex="0">Plan exepcional de pagos del impuesto Ambiental</li>
                                     <li tabindex="0">Consulta de subcategoria por trámite</li>
@@ -336,7 +341,7 @@
                             <div class="cell" tabindex="0" aria-label="Servicio quince">
                                 <em class="fa-solid fa-circle-plus" tabindex="0" role="button" aria-label="Boton para conocer los servicios extras"></em>
                                 <em class="icono2" tabindex="0" aria-label="Icono con la figura de unos engranajes para la opción servicio extras"><iconify-icon icon="ic:outline-miscellaneous-services" ></iconify-icon></em>
-                                <p class="text" tabindex="0">Otros servicios</p>
+                                <strong class="text" tabindex="0">Otros servicios</strong>
                             </div>
                         </div>
                     </div>
