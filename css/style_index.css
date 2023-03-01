@@ -203,6 +203,24 @@
     }
 }
 
+@media (max-width: 382px) {
+   
+    .cell em {
+        left: 2%;
+    }
+    
+    .cell em:nth-of-type(2) {
+        left: 10%;
+        margin-left: 10%;
+    }
+    .cell .text {
+        margin-left: 40%;
+    }
+    .container{
+        width: 100%;
+    }
+}
+
 #submenuOpciones ul {
     list-style: none;
     padding: 2px;
