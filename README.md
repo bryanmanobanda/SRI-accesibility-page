@@ -1,4 +1,4 @@
-### 🚀 SRI – Web Page Redesign for Payment Reports
+## 🚀 SRI – Web Page Redesign for Payment Reports
 
 The **redesign of the SRI payment report module** aimed to enhance **usability, accessibility, and responsive design**, addressing limitations in the original website.
 
@@ -8,7 +8,7 @@ The new version was developed using **HTML, CSS, and JavaScript** and evaluated 
 - **Vehicle Report Consultation**, where users can enter a license plate number and download a PDF.
 - **Vehicle Payment Reports**, allowing users to view all payments associated with a vehicle and access detailed reports.
 
-### 📷 Screenshots
+## 📷 Screenshots
 
 Homepage with all services.
 ![homepage SRI with all services](/imagenes/main_page.png)
@@ -19,7 +19,7 @@ Vehicle payment reports.
 Detailed payment report for a specific vehicle.
 ![details of payment](/imagenes/details.png)
 
-### 🖥 Installation and Setup Instructions
+## 🖥 Installation and Setup Instructions
 
 Clone the repository and open the project in your preferred code editor.
 
@@ -27,7 +27,7 @@ Run the `index.html` file to launch the application.
 
 Use the `PCA2445` value like a Placa
 
-### 🖋 Reflection
+## 🖋 Reflection
 
 The primary objective of the redesign was to **improve the vehicle payment report module**, focusing on **usability, accessibility, and responsive design**.
 
